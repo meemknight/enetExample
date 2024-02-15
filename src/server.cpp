@@ -89,19 +89,18 @@ void serverFunction()
 
 			}
 
-			if (client)
+
+		}
+
+		if (client)
+		{
+			std::string message = "";
+			std::cin >> message;
+
+			if (message != "")
 			{
-				std::string message = "";
-				std::cin >> message;
-
-				if (message != "")
-				{
-					sendMessage(message.c_str(), message.size()+1, client);
-				}
+				sendMessage(message.c_str(), message.size() + 1, client);
 			}
-
-
-
 		}
 
 
